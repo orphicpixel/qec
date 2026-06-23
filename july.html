@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta property="og:title" content="QEC Tech Team Schedule - July 2026">
+<meta property="og:description" content="Qatar Evangelical Church Tech Team Schedule for July 2026. Find service times and team assignments.">
+<meta property="og:image" content="https://qec-ah.netlify.app/qec-thumbnail.png">
+<meta property="og:url" content="https://qec-ah.netlify.app/">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="qec-icon.png">
+<title>QEC Tech Team Schedule - July 2026</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<style>
+
+:root{
+  --primary:#0f766e;
+  --primary-dark:#0d4f47;
+  --primary-light:#14b8a6;
+  --gold:#f0cc84;
+  --white:#ffffff;
+  --bg:#f0fdf9;
+  --text:#1a4d4a;
+  --soft:#d1f2eb;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Open Sans', sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+.hero{
+  position:relative;
+  background:
+  linear-gradient(rgba(43, 10, 58, 0.88),
+  rgba(43, 10, 58, 0.92)),
+  url('https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1600&auto=format&fit=crop');
+
+  background-size:cover;
+  background-position:center;
+  text-align:center;
+  padding:80px 20px 100px;
+  color:white;
+}
+
+.hero::after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:-1px;
+  width:100%;
+  height:70px;
+  background:var(--bg);
+  border-radius:100% 100% 0 0;
+}
+
+.logo{
+  font-size:15px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#eedcff;
+  margin-bottom:14px;
+}
+
+.hero h1{
+  font-family:'Montserrat', sans-serif;
+  font-size:clamp(2.3rem, 6vw, 4.5rem);
+  font-weight:800;
+  line-height:1.1;
+  margin-bottom:10px;
+}
+
+.hero h2{
+  color:var(--gold);
+  letter-spacing:4px;
+  margin-bottom:35px;
+  font-size:clamp(1rem, 2vw, 1.5rem);
+}
+
+.verse-box{
+  max-width:900px;
+  margin:auto;
+  padding:30px 25px;
+  border-radius:25px;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.15);
+  backdrop-filter:blur(5px);
+}
+
+.verse-icon{
+  font-size:40px;
+  color:var(--gold);
+  margin-bottom:15px;
+}
+
+.verse{
+  font-size:clamp(1.1rem, 2vw, 1.8rem);
+  line-height:1.8;
+  font-style:italic;
+  margin-bottom:12px;
+}
+
+.verse-ref{
+  color:var(--gold);
+  font-weight:700;
+}
+
+.container{
+  width:min(1400px, 94%);
+  margin:auto;
+  padding:40px 0 80px;
+  position:relative;
+  z-index:5;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.section-title h3{
+  font-family:'Montserrat', sans-serif;
+  color:var(--primary);
+  font-size:clamp(2rem, 5vw, 3rem);
+  margin-bottom:10px;
+}
+
+.section-title p{
+  color:#6d6475;
+}
+
+.schedule-grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:25px;
+}
+
+@media(max-width:768px){
+
+  .schedule-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+.card{
+  background:white;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 12px 30px rgba(0,0,0,0.08);
+  border:1px solid #eadcf3;
+  transition:0.3s ease;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.card-header{
+  background:linear-gradient(135deg, var(--primary), var(--primary-light));
+  padding:22px;
+  color:white;
+}
+
+.card-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.card-title{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.card-title i{
+  font-size:28px;
+}
+
+.card-title h4{
+  font-family:'Montserrat', sans-serif;
+  font-size:1.2rem;
+  line-height:1.2;
+  white-space:nowrap;
+}
+
+.call-time{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  background:rgba(255,255,255,0.15);
+  padding:10px 16px;
+  border-radius:50px;
+  font-weight:700;
+  font-size:0.92rem;
+}
+
+.card-body{
+  padding:24px;
+}
+
+.team-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:16px;
+  padding:15px 0;
+  border-bottom:1px solid #eee;
+}
+
+.team-item:last-child{
+  border-bottom:none;
+}
+
+.left{
+  display:flex;
+  gap:14px;
+  flex:1;
+}
+
+.left i{
+  width:42px;
+  height:42px;
+  border-radius:12px;
+  background:var(--soft);
+  color:var(--primary);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:18px;
+  flex-shrink:0;
+}
+
+.role{
+  font-weight:700;
+  color:var(--primary-dark);
+  margin-bottom:4px;
+}
+
+.name{
+  text-align:right;
+  max-width:45%;
+  font-weight:600;
+  color:#555;
+  font-size:0.95rem;
+}
+
+.footer{
+  background:linear-gradient(135deg, var(--primary-dark), var(--primary));
+  color:white;
+  text-align:center;
+  padding:50px 20px;
+}
+
+.footer-logo{
+  font-family:'Montserrat', sans-serif;
+  font-size:2rem;
+  font-weight:800;
+  margin-bottom:10px;
+}
+
+.footer p{
+  color:#e7d8ef;
+  margin-bottom:18px;
+}
+
+.footer-bottom{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  flex-wrap:wrap;
+}
+
+.footer-bottom div{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+@media(max-width:768px){
+
+  .hero{
+    padding:70px 18px 90px;
+  }
+
+  .schedule-grid{
+    grid-template-columns:1fr;
+  }
+
+  .team-item{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .name{
+    max-width:100%;
+    text-align:left;
+    margin-left:56px;
+  }
+
+  .card{
+    border-radius:20px;
+  }
+
+  .card-top{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+    align-items:center;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+
+  <div class="logo">
+    QEC • Qatar Evangelical Church
+  </div>
+
+  <h1>Tech Team Schedule</h1>
+  <h2>JULY 2026</h2>
+
+  <div class="verse-box">
+
+    <div class="verse-icon">
+      <i class="fa-solid fa-cross"></i>
+    </div>
+
+    <div class="verse">
+      "Whatever you do, work at it with all your heart, as working for the Lord, not for human masters"
+    </div>
+
+    <div class="verse-ref">
+     Colossians 3:23
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTENT -->
+<section class="container">
+
+  <div class="section-title">
+    <h3>Ministry Schedule</h3>
+    <p>Serving God through excellence in media and technology.</p>
+  </div>
+
+  <div class="schedule-grid">
+
+    <!-- THURSDAY -->
+    <div class="card">
+
+      <div class="card-header">
+
+        <div class="card-top">
+
+          <div class="card-title">
+            <i class="fa-solid fa-calendar-days"></i>
+            <h4>Thursday Tech Team</h4>
+          </div>
+
+          <div class="call-time">
+            <i class="fa-regular fa-clock"></i>
+            06:15 PM
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="card-body">
+
+        <div class="team-item">
+          <div class="left">
+            <i class="fa-solid fa-desktop"></i>
+            <div class="role">Multimedia</div>
+          </div>
+          <div class="name">Bro. Amiel Orale</div>
+        </div>
+
+        <div class="team-item">
+          <div class="left">
+            <i class="fa-solid fa-sliders"></i>
+            <div class="role">FOH Sound-tech</div>
+          </div>
+          <div class="name">Bro. Jekyll Boltron</div>
+        </div>
+
+        <div class="team-item">
+          <div class="left">
+            <i class="fa-solid fa-tower-broadcast"></i>
+            <div class="role">Broadcast Tech</div>
+          </div>
+          <div class="name">Bro. Raniel Areglado</div>
+        </div>
+
+        <div class="team-item">
+          <div class="left">
+            <i class="fa-solid fa-volume-high"></i>
+            <div class="role">Broadcast Sound-Tech</div>
+          </div>
+          <div class="name">Bro. Mhike Sapinoso</div>
+        </div>
+
+        <div class="team-item">
+          <div class="left">
+            <i class="fa-solid fa-video"></i>
+            <div class="role">Broadcast Director</div>
+          </div>
+          <div class="name">Sis. May Espejo</div>
+        </div>
+
+        <div class="team-item">
+          <div class="left">
+            <i class="fa-solid fa-camera"></i>
+            <div class="role">Camera Man 1</div>
+          </div>
+          <div class="name">Bro. Mannny Canlas</div>
+        </div>
+
+        <div class="team-item">
+          <div class="left">
+            <i class="fa-solid fa-camera-retro"></i>
+            <div class="role">Camera Man 2</div>
+          </div>
+          <div class="name">Bro. Iverson Banes</div>
+        </div>
+
+        <div class="team-item">
+          <div class="left">
+            <i class="fa-solid fa-shoe-prints"></i>
+            <div class="role">Floor Director</div>
+          </div>
+          <div class="name">Bro. Francis Requiza</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- FRIDAY -->
+    <div class="card">
+
+      <div class="card-header">
+
+        <div class="card-top">
+
+          <div class="card-title">
+            <i class="fa-solid fa-calendar-days"></i>
+            <h4>Friday Tech Team</h4>
+          </div>
+
+          <div class="call-time">
+            <i class="fa-regular fa-clock"></i>
+            08:30 AM
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="card-body">
+
+        <div class="team-item">
+          <div class="left">
+            <i class="fa-solid fa-desktop"></i>
+            <div class="role">Multimedia</div>
+          </div>
+          <div class="name">Sis. Kristine Espero</div>
+        </div>
+
+        <div class="team-item">
+          <div class="left">
+            <i class="fa-solid fa-sliders"></i>
+            <div class="role">FOH Sound-tech</div>
+          </div>
+          <div class="name">Bro. Jekyll Boltron</div>
+        </div>
+
+        <div class="team-item">
+          <div class="left">
+            <i class="fa-solid fa-tower-broadcast"></i>
+            <div class="role">Broadcast Tech</div>
+          </div>
+          <div class="name">Sis. Jai Bolivar</div>
+        </div>
+
+        <div class="team-item">
+          <div class="left">
+            <i class="fa-solid fa-volume-high"></i>
+            <div class="role">Broadcast Sound-Tech</div>
+          </div>
+          <div class="name">Bro. Mhike Sapinoso</div>
+        </div>
+
+        <div class="team-item">
+          <div class="left">
+            <i class="fa-solid fa-video"></i>
+            <div class="role">Broadcast Director</div>
+          </div>
+          <div class="name">Bro. Marlon Cureg</div>
+        </div>
+
+        <div class="team-item">
+          <div class="left">
+            <i class="fa-solid fa-camera"></i>
+            <div class="role">Main Camera</div>
+          </div>
+          <div class="name">Bro. Arman Nojadera</div>
+        </div>
+
+        <div class="team-item">
+          <div class="left">
+            <i class="fa-solid fa-camera-retro"></i>
+            <div class="role">Cam 2 (Tripod / Dolly)</div>
+          </div>
+          <div class="name">Bro. Roderick Dado</div>
+        </div>
+
+        <div class="team-item">
+          <div class="left">
+            <i class="fa-solid fa-mobile-screen"></i>
+            <div class="role">Cam 3 (Gymbal Cam)</div>
+          </div>
+          <div class="name">Bro. Mark Sacdalan</div>
+        </div>
+
+        <div class="team-item">
+          <div class="left">
+            <i class="fa-solid fa-expand"></i>
+            <div class="role">Cam 4 (Wide Standby)</div>
+          </div>
+          <div class="name">Bro. Mhike Sapinoso / Switch</div>
+        </div>
+
+        <div class="team-item">
+          <div class="left">
+            <i class="fa-solid fa-shoe-prints"></i>
+            <div class="role">Floor Director</div>
+          </div>
+          <div class="name">Bro. Jun Semilia</div>
+        </div>
+
+      </div>
+    </div>
+ <!-- MONDAY -->
+    <div class="card">
+
+      <div class="card-header">
+
+        <div class="card-top">
+
+          <div class="card-title">
+            <i class="fa-solid fa-calendar-days"></i>
+            <h4>Monday PM Tech Team</h4>
+          </div>
+
+          <div class="call-time">
+            <i class="fa-regular fa-clock"></i>
+            06:30 PM
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="card-body">
+
+        <div class="team-item">
+          <div class="left">
+            <i class="fa-solid fa-desktop"></i>
+            <div class="role">Multimedia</div>
+          </div>
+          <div class="name">Sis. Janette Abdulla</div>
+        </div>
+
+        <div class="team-item">
+          <div class="left">
+            <i class="fa-solid fa-sliders"></i>
+            <div class="role">FOH Sound-tech</div>
+          </div>
+          <div class="name">Bro. Jekyll Boltron</div>
+        </div>
+
+        <div class="team-item">
+          <div class="left">
+            <i class="fa-solid fa-tower-broadcast"></i>
+            <div class="role">Broadcast Tech</div>
+          </div>
+          <div class="name">Bro. Gil Dinglasan</div>
+        </div>
+
+        <div class="team-item">
+          <div class="left">
+            <i class="fa-solid fa-volume-high"></i>
+            <div class="role">Broadcast Sound-Tech</div>
+          </div>
+          <div class="name">Bro. Mhike Sapinoso</div>
+        </div>
+
+        <div class="team-item">
+          <div class="left">
+            <i class="fa-solid fa-video"></i>
+            <div class="role">Broadcast Director</div>
+          </div>
+          <div class="name">Bro. Hector Paul Salazar</div>
+        </div>
+
+        <div class="team-item">
+          <div class="left">
+            <i class="fa-solid fa-camera"></i>
+            <div class="role">Camera Man</div>
+          </div>
+          <div class="name">Bro. Allan Orale</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- BRAZILIAN -->
+    <div class="card">
+
+      <div class="card-header">
+
+        <div class="card-top">
+
+          <div class="card-title">
+            <i class="fa-solid fa-calendar-days"></i>
+            <h4>Brazilian Tech Team</h4>
+          </div>
+
+          <div class="call-time">
+            <i class="fa-regular fa-clock"></i>
+            01:30 PM
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="card-body">
+
+        <div class="team-item">
+          <div class="left">
+            <i class="fa-solid fa-user-gear"></i>
+            <div class="role">Tech In-charge</div>
+          </div>
+          <div class="name">Bro. Mhike Sapinoso</div>
+        </div>
+
+        <div class="team-item">
+          <div class="left">
+            <i class="fa-solid fa-user"></i>
+            <div class="role">Assistant</div>
+          </div>
+          <div class="name">Bro. Jekyll Boltron</div>
+        </div>
+
+      </div>
+    </div>
+
+   
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+  <div class="footer-logo">
+    QEC
+  </div>
+
+  <p>
+    We serve. We worship. We glorify God.
+  </p>
+
+  <div class="footer-bottom">
+
+    <div>
+      <i class="fa-solid fa-cross"></i>
+      Qatar Evangelical Church
+    </div>
+
+    <div>
+      <i class="fa-solid fa-heart"></i>
+      Serving with Gladness
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
